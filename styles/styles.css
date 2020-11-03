@@ -1,0 +1,111 @@
+/* Style général */
+*{
+	margin: 0;
+	padding: 0!important;
+}
+
+.vh100{
+	height: 100vh;
+}
+
+.bgdarkborderwarning{
+	border:7px solid;
+	border-radius: 20px;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+.space{
+  margin:0 200px 0 200px ;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style de la partie accueil */
+
+#home{
+	background: url('../ressources/test.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+#infoaccueil{
+	width: 25vw;
+}
+
+@media screen and (max-width: 917px){
+	#infoaccueil{
+	width: 50vw;
+	}
+}
+
+/* Style de la partie nav */
+
+#nav{
+	height: 10vh;
+}
+
+
+/* Style de la partie profil */
+
+#infoprofil{
+}
+
+/* Style de la partie parcours */
+
+
+/* Style de la partie réalisation */
+
+.card-scale{
+  transition-duration: 1s;
+}
+
+.card-scale:hover{
+  transform: scale(0.9);
+}
+
+/* Style de la partie contact */
+
+
+/**/
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}

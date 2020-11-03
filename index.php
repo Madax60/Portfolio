@@ -1,0 +1,13 @@
+<?php 
+session_start();
+$page="./pages/";
+$includes="./includes/";
+include_once($includes.'header.php');
+include_once($page.'home.php');
+include_once($page.'nav.php');
+include_once($page.'about.php');
+include_once($page.'studies.php');
+include_once($page.'works.php');
+include_once($page.'contact.php');
+include_once($includes.'footer.php');
+?>
