@@ -1,5 +1,5 @@
 <?php 
-include_once('./traitement/connexion_bdd.php');
+include_once('../traitement/connexion_bdd.php');
 
 if(isset($_SESSION['id'])) {
    $requser = $bdd->prepare("SELECT * FROM admin WHERE Id_admin = ?");
@@ -11,7 +11,7 @@ if(isset($_SESSION['id'])) {
       $reqnom->execute(array($nouvnom));
       $pseudoexist = $reqnom->rowCount();
       if ($pseudoexist == 0) {
-         $insertpseudo = $bdd->prepare("UPDATE admin SET Nom_admin = ? WHERE Id_admin = ?");
+         $insertpseudo = $bdd->prepare("UPDATE admin SET nom_admin = ? WHERE id_admin = ?");
          $insertpseudo->execute(array($nouvnom, $_SESSION['id']));
          header('Location: profil.php?id='.$_SESSION['id']);
       }else{
@@ -24,7 +24,7 @@ if(isset($_SESSION['id'])) {
       $mdp1 = htmlspecialchars($_POST['nouvmdp1']);
       $mdp2 = htmlspecialchars($_POST['nouvmdp1']);
       if($mdp1 == $mdp2) {
-         $insertmdp = $bdd->prepare("UPDATE admin SET Mdp_admin = ? WHERE Id_admin = ?");
+         $insertmdp = $bdd->prepare("UPDATE admin SET mdp_admin = ? WHERE id_admin = ?");
          $insertmdp->execute(array($mdp1, $_SESSION['id']));
          header('Location: profil.php?id='.$_SESSION['id']);
       } else {

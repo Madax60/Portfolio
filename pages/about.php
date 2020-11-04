@@ -1,7 +1,10 @@
-<section id="about" class="container-fluid d-flex justify-content-center align-items-center space mt-5">
+<section id="about" class="container-fluid d-flex justify-content-center align-items-center space mabout">
+	<div class="container w-25 border-section border border-warning"></div>
+	<h1 class="text-warning w-50 m-auto text-center">Profil</h1>
 	<article id="infoprofil" class="container row border-warning bgdarkborderwarning w-75 bg-dark ">
+
 		<aside class="container col-md-4">
-			<img src="ressources/moi.png" width="200">
+			<img src="./ressources/moi.png" width="200">
 		</aside>
 		<aside class="col-md-8 p-5">
 			<h4 class="text-warning">Mehdi Samni</h4>

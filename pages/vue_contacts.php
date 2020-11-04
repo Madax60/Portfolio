@@ -1,18 +1,17 @@
 <?php 
 session_start();
-include_once('./traitement/traitement_contact.php');
-include_once('./includes/header.php');
+include_once('../traitement/traitement_contact.php');
+include_once('../includes/header.php');
 if(isset($_SESSION["id"]))
 { 
 ?>
-<a href="./administration.php">Revenir en arrière</a>
+<a class="text-warning font-weight-bold" href="./administration.php">Revenir en arrière</a>
 <table class="bg-warning w-50 mx-auto mt-5">
     <tr class="p-3">
-		<th class="p-3">Nom du projet</th>
+		<th class="p-3">Nom</th>
+		<th class="p-3">Prénom</th>
+		<th class="p-3">Objet</th>
 		<th class="p-3">Description</th>
-		<th class="p-3">Date début</th>
-		<th class="p-3">Date fin</th>
-		<th class="p-3">Technologie(s) utilisée(s)</th>
     </tr>
     <?php 
     while ($donnees = $contacts->fetch())
@@ -20,11 +19,10 @@ if(isset($_SESSION["id"]))
 
     ?>
     <tr>
-		<td class="p-2"><?php echo $donnees['Nom_contact'] ?></td>
-		<td class="p-2"><?php echo $donnees['Prenom_contact'] ?></td>
-		<td class="p-2"><?php echo $donnees['Objet_contact'] ?></td>
-		<td class="p-2"><?php echo $donnees['Description_contact'] ?></td>
-		<td class="p-2">Bla</td>
+		<td class="p-2"><?php echo $donnees['nom_contact'] ?></td>
+		<td class="p-2"><?php echo $donnees['prenom_contact'] ?></td>
+		<td class="p-2"><?php echo $donnees['objet_contact'] ?></td>
+		<td class="p-2"><?php echo $donnees['description_contact'] ?></td>
     </tr>
     <?php 
 	}	

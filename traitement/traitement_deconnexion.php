@@ -17,7 +17,7 @@ if (isset($_SESSION['id']))
 
 }else{ // Dans le cas contraire on t'empêche d'accéder à cette page en te redirigeant vers la page que tu veux.
 
-    header('Location: index.php');
+    header('Location: ../index.php');
 
 }
 

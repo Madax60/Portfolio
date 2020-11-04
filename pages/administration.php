@@ -4,12 +4,12 @@ include_once('../includes/header.php');
 if(isset($_SESSION["id"]))
 { 
 ?>
-<a href="./backoffice.php">Revenir en arrière</a>
+<a class="text-warning font-weight-bold" href="backoffice.php">Revenir en arrière</a>
 <section class="container_fluid">
 	<article>
-		<a href="vue_projets.php"><h3>Vue des projets</h3></a>
-		<a href="vue_parcours.php"><h3>Vue du parcours</h3></a>
-		<a href="vue_contacts.php"><h3>Vue des contacts</h3></a>
+		<a class="text-warning font-weight-bold" href="vue_projets.php"><h3>Vue des projets</h3></a>
+		<a class="text-warning font-weight-bold" href="vue_parcours.php"><h3>Vue du parcours</h3></a>
+		<a class="text-warning font-weight-bold" href="vue_contacts.php"><h3>Vue des contacts</h3></a>
 	</article>
 </section>
 

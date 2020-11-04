@@ -5,8 +5,7 @@ include_once('../includes/header.php');
 if(isset($_SESSION["id"]))
 { 
 ?>
-<a href="./administration.php">Revenir en arrière</a>
-<div style="overflow-x:auto;">
+<a class="text-warning font-weight-bold" href="./administration.php">Revenir en arrière</a>
 <table class="bg-warning w-50 mx-auto mt-5">
     <tr>
 		<td class="p-3">Nom de l'étude/diplome</th>
@@ -20,10 +19,10 @@ if(isset($_SESSION["id"]))
 
     ?>
     <tr>
-		<td class="p-2"><?php echo $donnees['Nom_parcours'] ?></td>
-		<td class="p-2"><?php echo $donnees['Description_parcours'] ?></td>
-		<td class="p-2"><?php echo $donnees['Annee_debut_parcours'] ?></td>
-		<td class="p-2"><?php echo $donnees['Annee_fin_parcours'] ?></td>
+		<td class="p-2"><?php echo $donnees['nom_parcours'] ?></td>
+		<td class="p-2"><?php echo $donnees['description_parcours'] ?></td>
+		<td class="p-2"><?php echo $donnees['annee_debut_parcours'] ?></td>
+		<td class="p-2"><?php echo $donnees['annee_fin_parcours'] ?></td>
     </tr>
     <?php 
 	}	

@@ -10,7 +10,7 @@ if(isset($_SESSION["id"]))
 
 	<form method="POST" action="" enctype="multipart/form-data">
 		<label for="nouvnom"><h3>Nom :</h3></label>
-		<input type="text" name="nouvnom" id="nouvnom" placeholder="Nom" value="<?php echo $user['Nom_admin']; ?>" /><br>
+		<input type="text" name="nouvnom" id="nouvnom" placeholder="Nom" value="<?php echo $user['nom_admin']; ?>" /><br>
 		<?php 
 		if (isset($msg)) {
 			echo $msg;
