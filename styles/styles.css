@@ -1,11 +1,22 @@
+/*TEST*/
+.imgProj{
+    width: 80%;
+}
+.spacebetweenparttest{
+    margin-top: 5%;
+}
 /* Style général */
 *{
 	margin: 0;
 	padding: 0!important;
 }
 
-.vh100{
-	height: 100vh;
+.minvh100{
+    min-height: 100vh;
+}
+
+.w-2{
+    width: 2%!important;
 }
 
 .bgdarkborderwarning{
@@ -17,8 +28,16 @@
   opacity: 0;
 }
 
+.row{
+    margin: 0!important;
+}
+
 .space{
   margin:0 200px 0 200px ;
+}
+
+.underline{
+    text-decoration: underline;
 }
 
 table {
@@ -35,10 +54,31 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+/* ScrollBar */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #343A40;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FFC107; 
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #FFF100; 
+}
 /* Style de la partie accueil */
 
 #home{
-	background: url('../ressources/test.jpg');
+	background: url('../resources/test.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 
@@ -57,15 +97,35 @@ tr:nth-child(even) {
 /* Style de la partie nav */
 
 #nav{
-	height: 10vh;
+    height: 10vh;
+    opacity: 0.2;
+    transition-duration: 3s;
+    animation-duration: 3s;
+}
+
+#nav:hover{
+    opacity: 1;
+    
 }
 
 
 /* Style de la partie profil */
-
-#infoprofil{
+.imgprofil{
+    width: 60%;
 }
 
+.spacebetweenpart{
+    margin-top: 10%;
+}
+
+.imgabout{
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .mabout{
   margin-top: 10%;
 }
@@ -310,7 +370,7 @@ body{
         height: 110px
     }
     .main-timeline .date {
-        top: 30%
+        top: 20%
     }
     .main-timeline .year {
         font-size: 24px
@@ -326,6 +386,11 @@ body{
     }
 }
 /* Style de la partie réalisation */
+.buttonWorks{
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 .card-scale{
   transition-duration: 1s;
@@ -336,9 +401,29 @@ body{
 }
 
 /* Style de la partie contact */
+#contactForm{
+    width: 75%;
+}
 
+@media screen and (min-device-width : 320px) and (max-device-width : 575px) {
+    #contactForm{
+    width: 100%;
+    }
 
-/**/
+    .infpro{
+        flex-direction: column;
+    }
+
+}
+@media screen and (min-device-width : 576px) and (max-device-width : 991px) {
+    .infpro{
+        flex-direction: column;
+    }
+
+}
+
+/* Style de la partie footer */
+
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
